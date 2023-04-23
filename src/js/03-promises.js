@@ -13,7 +13,7 @@ function onSubmitBtn(event) {
   let step = form.step.value;
   step = Number(step);
 
-  for (i = 1; i <= amount; i++) {
+  for (let i = 1; i <= amount; i++) {
     createPromise(i, delay)
       .then(value => Notiflix.Notify.success(value))
       .catch(err => Notiflix.Notify.failure(err));
